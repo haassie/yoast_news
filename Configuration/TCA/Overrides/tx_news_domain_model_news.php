@@ -1,5 +1,5 @@
 <?php
-$llPrefix = 'LLL:EXT:yoast_seo/Resources/Private/Language/BackendModule.xlf:';
+$llPrefix = 'LLL:EXT:yoast_news/Resources/Private/Language/TCA.xlf:';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
     'tx_news_domain_model_news',
     [
