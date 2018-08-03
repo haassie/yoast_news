@@ -1,6 +1,8 @@
 {
     "name": "haassie/yoast_news",
     "description": "Integrate Yoast SEO for TYPO3 in EXT:news",
+    "type": "typo3-cms-extension",
+    "license": "GPL-3.0-or-later",
     "require": {
         "yoast-seo-for-typo3/yoast_seo": "^3.0",
         "georgringer/news": "^7.0"
