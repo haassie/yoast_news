@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2018-08-03T11:44:00Z" product-name="yoastnews">
+        <header/>
+        <body>
+            <trans-unit id="news.tabs.seo">
+                <source>Yoast SEO</source>
+            </trans-unit>
+            <trans-unit id="pages.palettes.metadata">
+                <source>Metadata</source>
+            </trans-unit>
+            <trans-unit id="pages.palettes.readability">
+                <source>Readability</source>
+            </trans-unit>
+            <trans-unit id="pages.palettes.seo">
+                <source>SEO</source>
+            </trans-unit>
+            <trans-unit id="news.field.snippetPreview">
+                <source>Snippet preview</source>
+            </trans-unit>
+            <trans-unit id="news.field.analysis">
+                <source>Analysis</source>
+            </trans-unit>
+            <trans-unit id="news.field.seoFocusKeyword">
+                <source>Focus keyword</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
