@@ -5,7 +5,7 @@
     "license": "GPL-3.0-or-later",
     "require": {
         "yoast-seo-for-typo3/yoast_seo": "^3.0",
-        "georgringer/news": "^7.0"
+        "georgringer/news": "^6.3||^7.0"
     },
     "authors": [
         {

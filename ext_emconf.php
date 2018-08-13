@@ -11,7 +11,7 @@ $EM_CONF['yoast_news'] = [
         'depends' => [
             'news' => '',
             'yoast_seo' => '',
-            'typo3' => '8.7.0-8.7.99'
+            'typo3' => '7.6.31-8.7.99'
         ],
         'conflicts' => [],
         'suggests' => []
