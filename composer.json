@@ -4,6 +4,7 @@
     "type": "typo3-cms-extension",
     "license": "GPL-3.0-or-later",
     "require": {
+        "typo3/cms-core": "^8.7|^9.5",
         "yoast-seo-for-typo3/yoast_seo": "^5.0",
         "georgringer/news": "^7.0"
     },
