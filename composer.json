@@ -4,13 +4,15 @@
     "type": "typo3-cms-extension",
     "license": "GPL-3.0-or-later",
     "require": {
-        "yoast-seo-for-typo3/yoast_seo": "^5.0 || ^6",
-        "georgringer/news": "^7.0 || ^8"
+        "yoast-seo-for-typo3/yoast_seo": "^5.0 || ^6 || ^7",
+        "georgringer/news": "^7.0 || ^8",
+        "typo3/cms-core": "^8.7 || ^9.5 || ^10.4",
+        "php": "^7.0"
     },
     "authors": [
         {
             "name": "Richard Haeser",
-            "email": "richardhaeser@gmail.com"
+            "email": "richard@richardhaeser.com"
         }
     ]
 }
