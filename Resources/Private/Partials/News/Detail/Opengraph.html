@@ -5,14 +5,6 @@
 <n:metaTag property="og:type" content="{settings.opengraph.type}" />
 <n:metaTag property="og:url" content="" useCurrentDomain="1" />
 <n:metaTag property="og:site_name" content="{settings.opengraph.site_name}" />
-<f:if condition="{newsItem.firstPreview}">
-	<n:metaTag
-		property="og:image"
-		content="{f:uri.image(src:'{newsItem.firstPreview.uid}', treatIdAsReference:1, maxWidth:'1200')}"
-		forceAbsoluteUrl="1" />
-	<n:metaTag property="og:image:width" content="{n:imageSize(property:'width')}" />
-	<n:metaTag property="og:image:height" content="{n:imageSize(property:'height')}" />
-</f:if>
 
 <f:if condition="{newsItem.ogTitle}">
 	<f:then><n:metaTag property="og:title" content="{newsItem.ogTitle}" /></f:then>
@@ -34,6 +26,27 @@
 	</f:else>
 </f:if>
 
+<f:if condition="{newsItem.ogImage.0}">
+	<f:then>
+		<n:metaTag
+				property="og:image"
+				content="{f:uri.image(src:'{newsItem.ogImage.0.uid}', treatIdAsReference:1, maxWidth:'1200', cropVariant: 'social')}"
+				forceAbsoluteUrl="1" />
+		<n:metaTag property="og:image:width" content="{n:imageSize(property:'width')}" />
+		<n:metaTag property="og:image:height" content="{n:imageSize(property:'height')}" />
+	</f:then>
+	<f:else>
+		<f:if condition="{newsItem.firstPreview}">
+			<n:metaTag
+					property="og:image"
+					content="{f:uri.image(src:'{newsItem.firstPreview.uid}', treatIdAsReference:1, maxWidth:'1200')}"
+					forceAbsoluteUrl="1" />
+			<n:metaTag property="og:image:width" content="{n:imageSize(property:'width')}" />
+			<n:metaTag property="og:image:height" content="{n:imageSize(property:'height')}" />
+		</f:if>
+	</f:else>
+</f:if>
+
 <f:if condition="{newsItem.twitterTitle}">
 	<f:then><n:metaTag name="twitter:title" content="{newsItem.twitterTitle}" /></f:then>
 	<f:else>
@@ -50,6 +63,25 @@
 		<f:if condition="{newsItem.description}">
 			<f:then><n:metaTag name="twitter:description" content="{newsItem.description}" /></f:then>
 			<f:else><n:metaTag name="twitter:description" content="{newsItem.teaser -> f:format.stripTags()}" /></f:else>
+		</f:if>
+	</f:else>
+</f:if>
+
+<f:if condition="{newsItem.twitterImage.0}">
+	<f:then>
+		<n:metaTag
+				name="twitter:image"
+				content="{f:uri.image(src:'{newsItem.twitterImage.0.uid}', treatIdAsReference:1, maxWidth:'1200', cropVariant: 'social')}"
+				forceAbsoluteUrl="1" />
+	</f:then>
+	<f:else>
+		<f:if condition="{newsItem.firstPreview}">
+			<n:metaTag
+					property="og:image"
+					content="{f:uri.image(src:'{newsItem.firstPreview.uid}', treatIdAsReference:1, maxWidth:'1200')}"
+					forceAbsoluteUrl="1" />
+			<n:metaTag property="og:image:width" content="{n:imageSize(property:'width')}" />
+			<n:metaTag property="og:image:height" content="{n:imageSize(property:'height')}" />
 		</f:if>
 	</f:else>
 </f:if>

@@ -7,6 +7,7 @@
         "yoast-seo-for-typo3/yoast_seo": "^5.0 || ^6 || ^7",
         "georgringer/news": "^7.0 || ^8",
         "typo3/cms-core": "^8.7 || ^9.5 || ^10.4",
+        "typo3/cms-extbase": "^8.7 || ^9.5 || ^10.4",
         "php": "^7.0"
     },
     "autoload": {

@@ -14,6 +14,12 @@ class News extends \GeorgRinger\News\Domain\Model\News
     protected $ogDescription;
 
     /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\GeorgRinger\News\Domain\Model\FileReference>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     */
+    protected $ogImage;
+
+    /**
      * @var string
      */
     protected $twitterTitle;
@@ -22,6 +28,19 @@ class News extends \GeorgRinger\News\Domain\Model\News
      * @var string
      */
     protected $twitterDescription;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\GeorgRinger\News\Domain\Model\FileReference>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     */
+    protected $twitterImage;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->ogImage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->twitterImage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
 
     /**
      * @return string
@@ -56,6 +75,22 @@ class News extends \GeorgRinger\News\Domain\Model\News
     }
 
     /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getOgImage(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+    {
+        return $this->ogImage;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $ogImage
+     */
+    public function setOgImage(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $ogImage)
+    {
+        $this->ogImage = $ogImage;
+    }
+
+    /**
      * @return string
      */
     public function getTwitterTitle(): string
@@ -85,5 +120,21 @@ class News extends \GeorgRinger\News\Domain\Model\News
     public function setTwitterDescription(string $twitterDescription)
     {
         $this->twitterDescription = $twitterDescription;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getTwitterImage(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+    {
+        return $this->twitterImage;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $twitterImage
+     */
+    public function setTwitterImage(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $twitterImage)
+    {
+        $this->twitterImage = $twitterImage;
     }
 }
