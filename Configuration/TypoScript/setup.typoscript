@@ -9,6 +9,14 @@
     lib.yoastSEO.slug.stdWrap.typolink.forceAbsoluteUrl = 0
 [global]
 
+plugin.tx_news {
+    view {
+        partialRootPaths {
+            0 = EXT:news/Resources/Private/Partials/
+            5 = EXT:yoast_news/Resources/Private/Partials/News/
+        }
+    }
+}
 #
 #[globalVar = GP:tx_news_pi1|news > 0] || [globalVar = GP:tx_news_pi1|news_preview > 0]
 #    lib.yoastSEO {

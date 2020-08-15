@@ -24,6 +24,33 @@
             <trans-unit id="news.field.seoFocusKeyword">
                 <source>Focus keyword</source>
             </trans-unit>
+            <trans-unit id="news.tabs.social" resname="news.tabs.social">
+                <source>Social Media</source>
+            </trans-unit>
+            <trans-unit id="news.palettes.og" resname="news.palettes.og">
+                <source>Open Graph (Facebook)</source>
+            </trans-unit>
+            <trans-unit id="news.palettes.twitter" resname="news.palettes.twitter">
+                <source>Twitter Cards</source>
+            </trans-unit>
+            <trans-unit id="og_title" resname="og_title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="og_description" resname="og_description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="og_image" resname="og_image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="twitter_title" resname="twitter_title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="twitter_description" resname="twitter_description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="twitter_image" resname="twitter_image">
+                <source>Image</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
