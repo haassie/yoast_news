@@ -1,24 +1,24 @@
 {
-    "name": "haassie/yoast_news",
-    "description": "Integrate Yoast SEO for TYPO3 in EXT:news",
-    "type": "typo3-cms-extension",
-    "license": "GPL-3.0-or-later",
-    "require": {
-        "yoast-seo-for-typo3/yoast_seo": "^5.0 || ^6 || ^7",
-        "georgringer/news": "^7.0 || ^8",
-        "typo3/cms-core": "^8.7 || ^9.5 || ^10.4",
-        "typo3/cms-extbase": "^8.7 || ^9.5 || ^10.4",
-        "php": "^7.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "RichardHaeser\\YoastSeoNews\\": "Classes/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Richard Haeser",
-            "email": "richard@richardhaeser.com"
-        }
-    ]
+  "name": "haassie/yoast_news",
+  "description": "Integrate Yoast SEO for TYPO3 in EXT:news",
+  "type": "typo3-cms-extension",
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "yoast-seo-for-typo3/yoast_seo": "^5.0 || ^6 || ^7",
+    "georgringer/news": "^7.0 || ^8",
+    "typo3/cms-core": "^8.7 || ^9.5 || ^10.4",
+    "typo3/cms-extbase": "^8.7 || ^9.5 || ^10.4",
+    "php": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "RichardHaeser\\YoastSeoNews\\": "Classes/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Richard Haeser",
+      "email": "richard@richardhaeser.com"
+    }
+  ]
 }
