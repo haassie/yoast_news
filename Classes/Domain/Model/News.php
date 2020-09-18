@@ -45,7 +45,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * @return string
      */
-    public function getOgTitle(): string
+    public function getOgTitle()
     {
         return $this->ogTitle;
     }
@@ -61,7 +61,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * @return string
      */
-    public function getOgDescription(): string
+    public function getOgDescription()
     {
         return $this->ogDescription;
     }
@@ -77,7 +77,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
-    public function getOgImage(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+    public function getOgImage()
     {
         return $this->ogImage;
     }
@@ -93,7 +93,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * @return string
      */
-    public function getTwitterTitle(): string
+    public function getTwitterTitle()
     {
         return $this->twitterTitle;
     }
@@ -109,7 +109,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * @return string
      */
-    public function getTwitterDescription(): string
+    public function getTwitterDescription()
     {
         return $this->twitterDescription;
     }
@@ -125,7 +125,7 @@ class News extends \GeorgRinger\News\Domain\Model\News
     /**
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
-    public function getTwitterImage(): \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+    public function getTwitterImage()
     {
         return $this->twitterImage;
     }
