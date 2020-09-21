@@ -1,5 +1,37 @@
 <?php
 $llPrefix = 'LLL:EXT:yoast_news/Resources/Private/Language/TCA.xlf:';
+
+$openGraphCropConfiguration = [
+    'config' => [
+        'cropVariants' => [
+            'default' => [
+                'disabled' => true,
+            ],
+            'social' => [
+                'title' => $llPrefix . 'imwizard.crop_variant.social',
+                'coverAreas' => [],
+                'cropArea' => [
+                    'x' => '0.0',
+                    'y' => '0.0',
+                    'width' => '1.0',
+                    'height' => '1.0'
+                ],
+                'allowedAspectRatios' => [
+                    '1.91:1' => [
+                        'title' => $llPrefix . 'imwizard.ratio.191_1',
+                        'value' => 1.91 / 1
+                    ],
+                    'NaN' => [
+                        'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.free',
+                        'value' => 0.0
+                    ],
+                ],
+                'selectedRatio' => '1.91:1',
+            ],
+        ],
+    ],
+];
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
     'tx_news_domain_model_news',
     [
@@ -44,8 +76,127 @@ $llPrefix = 'LLL:EXT:yoast_news/Resources/Private/Language/TCA.xlf:';
                 ]
             ]
         ],
-
+        'og_title' => [
+            'exclude' => true,
+            'l10n_mode' => 'prefixLangTitle',
+            'label' => $llPrefix . 'og_title',
+            'config' => [
+                'type' => 'input',
+                'size' => 40,
+                'max' => 255,
+                'eval' => 'trim'
+            ]
+        ],
+        'og_description' => [
+            'exclude' => true,
+            'l10n_mode' => 'prefixLangTitle',
+            'label' => $llPrefix . 'og_description',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 3
+            ]
+        ],
+        'og_image' => [
+            'exclude' => true,
+            'label' => $llPrefix . 'og_image',
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'og_image',
+                [
+                    // Use the imageoverlayPalette instead of the basicoverlayPalette
+                    'overrideChildTca' => [
+                        'types' => [
+                            '0' => [
+                                'showitem' => '
+                                    --palette--;;imageoverlayPalette,
+                                    --palette--;;filePalette'
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                                'showitem' => '
+                                    --palette--;;imageoverlayPalette,
+                                    --palette--;;filePalette'
+                            ]
+                        ],
+                        'columns' => [
+                            'crop' => $openGraphCropConfiguration
+                        ]
+                    ],
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true
+                    ]
+                ],
+                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+            )
+        ],
+        'twitter_title' => [
+            'exclude' => true,
+            'l10n_mode' => 'prefixLangTitle',
+            'label' => $llPrefix . 'twitter_title',
+            'config' => [
+                'type' => 'input',
+                'size' => 40,
+                'max' => 255,
+                'eval' => 'trim'
+            ]
+        ],
+        'twitter_description' => [
+            'exclude' => true,
+            'l10n_mode' => 'prefixLangTitle',
+            'label' => $llPrefix . 'twitter_description',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 3
+            ]
+        ],
+        'twitter_image' => [
+            'exclude' => true,
+            'label' => $llPrefix . 'twitter_image',
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'twitter_image',
+                [
+                    // Use the imageoverlayPalette instead of the basicoverlayPalette
+                    'overrideChildTca' => [
+                        'types' => [
+                            '0' => [
+                                'showitem' => '
+                                    --palette--;;imageoverlayPalette,
+                                    --palette--;;filePalette'
+                            ],
+                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                                'showitem' => '
+                                    --palette--;;imageoverlayPalette,
+                                    --palette--;;filePalette'
+                            ]
+                        ],
+                        'columns' => [
+                            'crop' => $openGraphCropConfiguration
+                        ]
+                    ],
+                    'behaviour' => [
+                        'allowLanguageSynchronization' => true
+                    ]
+                ],
+                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+            )
+        ],
     ]
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    'tx_news_domain_model_news',
+    'yoast-social-og',
+    '
+            --linebreak--, og_title, --linebreak--, og_description, --linebreak--, og_image,
+        '
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    'tx_news_domain_model_news',
+    'yoast-social-twitter',
+    '
+            --linebreak--, twitter_title, --linebreak--, twitter_description, --linebreak--, twitter_image,
+        '
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
@@ -88,6 +239,9 @@ $GLOBALS['TCA']['tx_news_domain_model_news']['palettes']['alternativeTitles']['s
         --palette--;' . $llPrefix . 'news.palettes.metadata;yoast-metadata,
         --palette--;' . $llPrefix . 'news.palettes.readability;yoast-readability,
         --palette--;' . $llPrefix . 'news.palettes.seo;yoast-focuskeyword,
+    --div--;' . $llPrefix . 'news.tabs.social,
+        --palette--;' . $llPrefix . 'news.palettes.og;yoast-social-og,
+        --palette--;' . $llPrefix . 'news.palettes.twitter;yoast-social-twitter,        
     ',
     '',
     'after:bodytext'
