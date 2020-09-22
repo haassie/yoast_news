@@ -18,7 +18,23 @@
   "authors": [
     {
       "name": "Richard Haeser",
-      "email": "richard@richardhaeser.com"
+      "email": "richard@richardhaeser.com",
+      "homepage": "https://www.richardhaeser.com",
+      "role": "Developer"
+    }
+  ],
+  "funding": [
+    {
+      "type": "buymeacoffee",
+      "url": "https://www.buymeacoffee.com/richardhaeser"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.com/paypalme/rhaeser"
+    },
+    {
+      "type": "other",
+      "url": "https://www.richardhaeser.com/contact"
     }
   ]
 }
