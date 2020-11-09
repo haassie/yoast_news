@@ -8,6 +8,10 @@ We will follow [Semantic Versioning](http://semver.org/).
 ## Yoast SEO for TYPO3 - EXT:news
 With this extension you can use the Yoast SEO analysis in your news items.
 
+## 2.1.2 November 9, 2020
+### Fixed
+* Changed labels of TCA fields to match the labels of Yoast SEO for TYPO3
+
 ## 2.1.1 October 30, 2020
 ### Fixed
 * The database fields for the Yoast SEO fields are now defined in the sql file
