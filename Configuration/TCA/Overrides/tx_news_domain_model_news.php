@@ -226,11 +226,16 @@ $openGraphCropConfiguration = [
     '
 );
 
+$GLOBALS['TCA']['tx_news_domain_model_news']['columns']['alternative_title']['label'] = $llPrefix . 'news.field.alternative_title';
 $GLOBALS['TCA']['tx_news_domain_model_news']['palettes']['metatags']['showitem'] =
     preg_replace('/description(.*,|.*$)/', '', $GLOBALS['TCA']['tx_news_domain_model_news']['palettes']['metatags']['showitem']);
 
+
 $GLOBALS['TCA']['tx_news_domain_model_news']['palettes']['alternativeTitles']['showitem'] =
     preg_replace('/alternative_title(.*,|.*$)/', '', $GLOBALS['TCA']['tx_news_domain_model_news']['palettes']['alternativeTitles']['showitem']);
+
+$GLOBALS['TCA']['tx_news_domain_model_news']['types'][0]['showitem'] =
+    str_replace('--palette--;;sitemap,', '', $GLOBALS['TCA']['tx_news_domain_model_news']['types'][0]['showitem']);
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tx_news_domain_model_news',
@@ -238,7 +243,8 @@ $GLOBALS['TCA']['tx_news_domain_model_news']['palettes']['alternativeTitles']['s
     --div--;' . $llPrefix . 'news.tabs.seo,
         --palette--;' . $llPrefix . 'news.palettes.metadata;yoast-metadata,
         --palette--;' . $llPrefix . 'news.palettes.readability;yoast-readability,
-        --palette--;' . $llPrefix . 'news.palettes.seo;yoast-focuskeyword,
+        --palette--;' . $llPrefix . 'news.palettes.focusKeyphrase;yoast-focuskeyword,
+        --palette--;;sitemap,
     --div--;' . $llPrefix . 'news.tabs.social,
         --palette--;' . $llPrefix . 'news.palettes.og;yoast-social-og,
         --palette--;' . $llPrefix . 'news.palettes.twitter;yoast-social-twitter,        

@@ -4,7 +4,7 @@
         <header/>
         <body>
             <trans-unit id="news.tabs.seo">
-                <source>Yoast SEO</source>
+                <source>SEO</source>
             </trans-unit>
             <trans-unit id="pages.palettes.metadata">
                 <source>Metadata</source>
@@ -16,13 +16,16 @@
                 <source>SEO</source>
             </trans-unit>
             <trans-unit id="news.field.snippetPreview">
-                <source>Snippet preview</source>
+                <source>Yoast SEO Snippet preview</source>
             </trans-unit>
             <trans-unit id="news.field.analysis">
-                <source>Analysis</source>
+                <source>Analysis results</source>
             </trans-unit>
             <trans-unit id="news.field.seoFocusKeyword">
                 <source>Focus keyword</source>
+            </trans-unit>
+            <trans-unit id="news.field.alternative_title">
+                <source>Title for search engines</source>
             </trans-unit>
             <trans-unit id="news.tabs.social" resname="news.tabs.social">
                 <source>Social Media</source>
@@ -32,6 +35,12 @@
             </trans-unit>
             <trans-unit id="news.palettes.twitter" resname="news.palettes.twitter">
                 <source>Twitter Cards</source>
+            </trans-unit>
+            <trans-unit id="news.palettes.focusKeyphrase" resname="pages.palettes.focusKeyphrase">
+                <source>Focus keyphrase</source>
+            </trans-unit>
+            <trans-unit id="news.palettes.readability" resname="pages.palettes.readability">
+                <source>Readability analysis</source>
             </trans-unit>
             <trans-unit id="og_title" resname="og_title">
                 <source>Title</source>
