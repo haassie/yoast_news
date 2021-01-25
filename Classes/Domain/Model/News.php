@@ -37,7 +37,6 @@ class News extends \GeorgRinger\News\Domain\Model\News
 
     public function __construct()
     {
-        parent::__construct();
         $this->ogImage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->twitterImage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
