@@ -23,6 +23,11 @@
       "role": "Developer"
     }
   ],
+  "extra": {
+		"typo3/cms": {
+			"extension-key": "yoast_news"
+		}
+	},
   "funding": [
     {
       "type": "buymeacoffee",
