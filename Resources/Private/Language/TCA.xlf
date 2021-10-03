@@ -61,10 +61,10 @@
                 <source>Image</source>
             </trans-unit>
             <trans-unit id="no_index" resname="no_index">
-                <source>No index</source>
+                <source>Index this page</source>
             </trans-unit>
             <trans-unit id="no_follow" resname="no_follow">
-                <source>No follow</source>
+                <source>Follow this page</source>
             </trans-unit>
         </body>
     </file>
