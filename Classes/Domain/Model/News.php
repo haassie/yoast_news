@@ -30,6 +30,17 @@ class News extends \GeorgRinger\News\Domain\Model\News
     protected $twitterDescription;
 
     /**
+     * @var bool
+     */
+    protected $noIndex;
+
+    /**
+     * @var bool
+     */
+    protected $noFollow;
+
+
+    /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\GeorgRinger\News\Domain\Model\FileReference>
      * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
      */
@@ -137,4 +148,37 @@ class News extends \GeorgRinger\News\Domain\Model\News
     {
         $this->twitterImage = $twitterImage;
     }
+
+    /**
+     * @return bool
+     */
+    public function isNoIndex(): bool
+    {
+        return $this->noIndex;
+    }
+
+    /**
+     * @param bool $noIndex
+     */
+    public function setNoIndex(bool $noIndex): void
+    {
+        $this->noIndex = $noIndex;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isNoFollow(): bool
+    {
+        return $this->noFollow;
+    }
+
+    /**
+     * @param bool $noFollow
+     */
+    public function setNoFollow(bool $noFollow): void
+    {
+        $this->noFollow = $noFollow;
+    }
+
 }

@@ -1,10 +1,13 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:y="http://typo3.org/ns/RichardHaeser/YoastSeoNews/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
 <n:metaTag property="og:type" content="{settings.opengraph.type}" />
 <n:metaTag property="og:url" content="" useCurrentDomain="1" />
 <n:metaTag property="og:site_name" content="{settings.opengraph.site_name}" />
+
+<n:metaTag property="robots" content="{y:robotsMetatag(no_index: newsItem.noIndex, no_follow: newsItem.noFollow)}" />
 
 <f:if condition="{newsItem.ogTitle}">
 	<f:then><n:metaTag property="og:title" content="{newsItem.ogTitle}" /></f:then>

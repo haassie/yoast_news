@@ -60,6 +60,12 @@
             <trans-unit id="twitter_image" resname="twitter_image">
                 <source>Image</source>
             </trans-unit>
+            <trans-unit id="no_index" resname="no_index">
+                <source>Index this page</source>
+            </trans-unit>
+            <trans-unit id="no_follow" resname="no_follow">
+                <source>Follow this page</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
