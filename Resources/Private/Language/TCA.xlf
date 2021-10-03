@@ -60,6 +60,12 @@
             <trans-unit id="twitter_image" resname="twitter_image">
                 <source>Image</source>
             </trans-unit>
+            <trans-unit id="imwizard.crop_variant.social" resname="imwizard.crop_variant.social">
+                <source>Crop variant social image</source>
+            </trans-unit>
+            <trans-unit id="imwizard.ratio.191_1" resname="imwizard.ratio.191_1">
+                <source>1.91:1</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
