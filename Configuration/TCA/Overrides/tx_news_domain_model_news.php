@@ -180,6 +180,39 @@ $openGraphCropConfiguration = [
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             )
         ],
+        'no_index' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'onChange' => 'reload',
+            'label' => $llPrefix . 'no_index',
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'items' => [
+                    [
+                        '0' => '',
+                        '1' => '',
+                        'invertStateDisplay' => true
+                    ]
+                ]
+            ]
+        ],
+        'no_follow' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => $llPrefix . 'no_follow',
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'items' => [
+                    [
+                        '0' => '',
+                        '1' => '',
+                        'invertStateDisplay' => true
+                    ]
+                ]
+            ]
+        ],
     ]
 );
 
