@@ -1,0 +1,42 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  RichardHaeser\YoastSeoNews\:
+    resource: '../Classes/*'
+
+  # YoastSeoForTypo3\YoastSeo\Backend\PageLayoutHeader:
+  #   public: true
+
+  # YoastSeoForTypo3\YoastSeo\Service\LocaleService:
+  #   public: true
+
+  # YoastSeoForTypo3\YoastSeo\Service\SnippetPreviewService:
+  #   public: true
+
+  # YoastSeoForTypo3\YoastSeo\Controller\AjaxController:
+  #   public: true
+
+  # YoastSeoForTypo3\YoastSeo\EventListener\TcaBuiltListener:
+  #   arguments:
+  #     - '@YoastSeoForTypo3\YoastSeo\Record\Builder\TcaBuilder'
+  #   tags:
+  #     - name: event.listener
+  #       identifier: 'yoastTca'
+  #       event: TYPO3\CMS\Core\Configuration\Event\AfterTcaCompilationEvent
+  #       method: 'addRecordTca'
+
+  # YoastSeoForTypo3\YoastSeo\PageTitle\RecordPageTitleProvider:
+  #   arguments:
+  #     - '@YoastSeoForTypo3\YoastSeo\Record\RecordService'
+
+  # YoastSeoForTypo3\YoastSeo\MetaTag\RecordMetaTagGenerator:
+  #   arguments:
+  #     - '@YoastSeoForTypo3\YoastSeo\Record\RecordService'
+
+  # YoastSeoForTypo3\YoastSeo\Widgets\Provider\OrphanedContentDataProvider:
+  #   arguments:
+  #     $excludedDoktypes: [3, 4, 6, 7, 199, 254, 255]
+  #     $limit: 8
